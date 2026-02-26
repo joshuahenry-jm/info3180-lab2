@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Flask Starter App</title>
+
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Application CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+    {% block css %} {% endblock%}
+  </head>
+  <body>
+    <header>
+        {% include "header.html" %}
+    </header>
+    <main>
+        <div class="container">
+            {% block main %}
+            <div class="profile">
+                <div class="top">
+                    <div class="img-box">
+                        <img src="{{ url_for('static', filename='me.jpg') }}"/>
+                    </div>
+                    <h1>Joshua Henry</h1>
+                    <div class="tag">@jhenry</div>
+                    <div class="location">Kingston, Jamaica</div>
+                    <div class="joined">Joined {{ profile_date }}</div>
+                </div>
+                <div class="btm">
+                    <p>
+                        I am an enthusiatic person that loves solving complicated
+                        problems. Contact me if you want to work on cool projects.
+                    </p>
+                    <div class="status">
+                        <div class="post">
+                            <strong class="num">7</strong>
+                            <p>Posts</p>
+                        </div>
+                        <div class="following">
+                            <strong class="num">100</strong>
+                            <p>Following</p>
+                        </div>
+                        <div class="followers">
+                            <strong class="num">250</strong>
+                            <p>Followers</p>
+                        </div>
+                    </div>
+                    <button>Follow</button>
+                </div>
+          </div>
+            {% endblock %}
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            {% include "footer.html" %}
+        </div>
+    </footer>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    {% block js %} {% endblock%}
+  </body>
+</html>

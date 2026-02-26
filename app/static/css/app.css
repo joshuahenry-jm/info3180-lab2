@@ -1,3 +1,67 @@
 body {
-    padding-top: 5rem;
+  padding-top: 5rem;
+}
+
+.profile * {
+  padding: 0;
+  margin: 0;
+}
+
+.profile .top,
+.profile .btm {
+  padding: 2rem;
+}
+
+.profile .top {
+  background: #020024;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.profile .top .img-box {
+  border-radius: 25px;
+}
+
+.profile .top .img-box img {
+  height: 240px;
+  border-radius: 50%;
+}
+
+.profile .btm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.profile .btm p{
+    text-align: center;
+}
+
+.profile .btm strong{
+    font-size: 1.4rem;
+}
+
+.profile .btm .status{
+    display: flex;
+    gap: 2.4rem;
+    text-align: center;
+}
+
+.profile .btm .status p{
+    color: grey;
+}
+
+.profile .btm button{
+    padding: 0.4rem 2rem;
+    color: white;
+    background-color: rgba(9, 9, 121, 1);
 }
